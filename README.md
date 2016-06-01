@@ -2,6 +2,13 @@
 
 Streaming UTF-8 parser for React PHP
 
+**Table of Contents**
+
+* [Usage](#usage)
+  * [Sequencer](#sequencer)
+* [Install](#install)
+* [License](#license)
+
 > Note: This project is in early alpha stage! Feel free to report any issues you encounter.
 
 ## Usage
