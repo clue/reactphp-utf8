@@ -1,0 +1,20 @@
+{
+    "name": "clue/utf8-react",
+    "description": "Streaming UTF-8 parser for React PHP",
+    "keywords": ["UTF-8", "utf8", "unicode", "streaming", "ReactPHP"],
+    "homepage": "https://github.com/clue/php-utf8-react",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lück",
+            "email": "christian@lueck.tv"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Clue\\React\\Utf8\\": "src/" }
+    },
+    "require": {
+        "php": ">=5.3",
+        "react/stream": "^0.4 || ^0.3"
+    }
+}
