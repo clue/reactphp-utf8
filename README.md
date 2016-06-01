@@ -9,7 +9,7 @@ Streaming UTF-8 parser for React PHP
 * [Install](#install)
 * [License](#license)
 
-> Note: This project is in early alpha stage! Feel free to report any issues you encounter.
+> Note: This project is in beta stage! Feel free to report any issues you encounter.
 
 ## Usage
 
@@ -59,8 +59,10 @@ The recommended way to install this library is [through Composer](https://getcom
 This will install the latest supported version:
 
 ```bash
-$ composer require clue/utf8-react:dev-master
+$ composer require clue/utf8-react:^0.1
 ```
+
+See also the [CHANGELOG](CHANGELOG.md) for details about version upgrades.
 
 ## License
 
