@@ -12,12 +12,11 @@ use React\Stream\Util;
  */
 class Sequencer extends EventEmitter implements ReadableStreamInterface
 {
-    private $buffer = '';
-    private $expect = 0;
-    private $closed = false;
-
     private $input;
     private $invalid;
+
+    private $buffer = '';
+    private $closed = false;
 
     public function __construct(ReadableStreamInterface $input, $replacementCharacter = '?')
     {
@@ -123,7 +122,10 @@ class Sequencer extends EventEmitter implements ReadableStreamInterface
             $this->emit('data', array($data));
         }
 
-        $this->emit('end', array());
+        if (!$this->closed) {
+            $this->emit('end');
+            $this->close();
+        }
     }
 
     /** @internal */
@@ -145,10 +147,12 @@ class Sequencer extends EventEmitter implements ReadableStreamInterface
         }
 
         $this->closed = true;
+        $this->buffer = '';
 
         $this->input->close();
 
-        $this->emit('close', array());
+        $this->emit('close');
+        $this->removeAllListeners();
     }
 
     public function pause()

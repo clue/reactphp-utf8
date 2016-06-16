@@ -161,6 +161,14 @@ class SequencerTest extends TestCase
         $this->assertFalse($this->sequencer->isReadable());
     }
 
+    public function testClosingInputWillRemoveAllDataListeners()
+    {
+        $this->input->close();
+
+        $this->assertEquals(array(), $this->input->listeners('data'));
+        $this->assertEquals(array(), $this->sequencer->listeners('data'));
+    }
+
     public function testClosingSequencerWillCloseInput()
     {
         $this->input->on('close', $this->expectCallableOnce());
@@ -171,6 +179,25 @@ class SequencerTest extends TestCase
         $this->sequencer->close();
 
         $this->assertFalse($this->sequencer->isReadable());
+    }
+
+    public function testClosingSequencerWillRemoveAllDataListeners()
+    {
+        $this->sequencer->close();
+
+        $this->assertEquals(array(), $this->input->listeners('data'));
+        $this->assertEquals(array(), $this->sequencer->listeners('data'));
+    }
+
+    public function testClosingSequencerDuringFinalDataEventFromEndWillNotEmitEnd()
+    {
+        $this->sequencer->on('data', $this->expectCallableOnceWith('?'));
+        $this->sequencer->on('data', array($this->sequencer, 'close'));
+
+        $this->sequencer->on('end', $this->expectCallableNever());
+
+        $this->input->emit('data', array("\xc3"));
+        $this->input->emit('end');
     }
 
     public function testCustomReplacementEmitDataWithInvalidStartUtf8SequencesWillForwardOnceReplaced()
@@ -203,6 +230,15 @@ class SequencerTest extends TestCase
         $this->sequencer = new Sequencer($this->input);
 
         $this->assertFalse($this->sequencer->isReadable());
+    }
+
+    public function testUnreadableInputWillNotAddAnyEventListeners()
+    {
+        $this->input->close();
+        $this->sequencer = new Sequencer($this->input);
+
+        $this->assertEquals(array(), $this->input->listeners('data'));
+        $this->assertEquals(array(), $this->sequencer->listeners('data'));
     }
 
     public function testEmitErrorEventWillForwardAndClose()
