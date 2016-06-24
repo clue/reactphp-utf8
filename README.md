@@ -8,6 +8,7 @@ Streaming UTF-8 parser for React PHP
   * [Sequencer](#sequencer)
 * [Install](#install)
 * [License](#license)
+* [More](#more)
 
 > Note: This project is in beta stage! Feel free to report any issues you encounter.
 
@@ -47,8 +48,8 @@ $stream = new Sequencer($stdin, 'X');
 As such, you can be sure you never get an invalid UTF-8 byte sequence out of
 the resulting stream.
 
-Note that the stream may still contain ASCII/ANSI control characeters, as they're
-valid UTF-8.
+Note that the stream may still contain ASCII control characters or
+ANSI / VT100 control byte sequences, as they're valid UTF-8.
 This binary data will be left as-is, unless you filter this at a later stage.
 
 ## Install
@@ -67,3 +68,15 @@ See also the [CHANGELOG](CHANGELOG.md) for details about version upgrades.
 ## License
 
 MIT
+
+## More
+
+* If you want to learn more about processing streams of data, refer to the documentation of
+  the underlying [react/stream](https://github.com/reactphp/stream) component.
+
+* If you want to process ASCII control characters or ANSI / VT100 control byte sequences, you may
+  want to use [clue/term-react](https://github.com/clue/php-term-react) on the raw input
+  stream before passing the resulting stream to the UTF-8 sequencer.
+
+* If you want to to display or inspect the byte sequences, you may
+  want to use [clue/hexdump](https://github.com/clue/php-hexdump) on the emitted byte sequences.
