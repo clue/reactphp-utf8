@@ -18,6 +18,6 @@
         "react/stream": "^0.4 || ^0.3"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8"
+        "phpunit/phpunit": "^5.0 || ^4.8"
     }
 }
