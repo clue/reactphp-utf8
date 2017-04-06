@@ -251,7 +251,7 @@ class SequencerTest extends TestCase
 
     public function testPipeReturnsDestStream()
     {
-        $dest = $this->getMock('React\Stream\WritableStreamInterface');
+        $dest = $this->getMockBuilder('React\Stream\WritableStreamInterface')->getMock();
 
         $ret = $this->sequencer->pipe($dest);
 
@@ -260,7 +260,7 @@ class SequencerTest extends TestCase
 
     public function testForwardPauseToInput()
     {
-        $this->input = $this->getMock('React\Stream\ReadableStreamInterface');
+        $this->input = $this->getMockBuilder('React\Stream\ReadableStreamInterface')->getMock();
         $this->input->expects($this->once())->method('pause');
 
         $this->sequencer = new Sequencer($this->input);
@@ -269,7 +269,7 @@ class SequencerTest extends TestCase
 
     public function testForwardResumeToInput()
     {
-        $this->input = $this->getMock('React\Stream\ReadableStreamInterface');
+        $this->input = $this->getMockBuilder('React\Stream\ReadableStreamInterface')->getMock();
         $this->input->expects($this->once())->method('resume');
 
         $this->sequencer = new Sequencer($this->input);
