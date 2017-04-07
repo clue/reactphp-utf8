@@ -1,6 +1,6 @@
 # clue/utf8-react [![Build Status](https://travis-ci.org/clue/php-utf8-react.svg?branch=master)](https://travis-ci.org/clue/php-utf8-react)
 
-Streaming UTF-8 parser for React PHP
+Streaming UTF-8 parser, built on top of [ReactPHP](https://reactphp.org/)
 
 **Table of Contents**
 
@@ -10,8 +10,6 @@ Streaming UTF-8 parser for React PHP
 * [Tests](#tests)
 * [License](#license)
 * [More](#more)
-
-> Note: This project is in beta stage! Feel free to report any issues you encounter.
 
 ## Usage
 
@@ -61,7 +59,7 @@ The recommended way to install this library is [through Composer](https://getcom
 This will install the latest supported version:
 
 ```bash
-$ composer require clue/utf8-react:^0.1.2
+$ composer require clue/utf8-react:^1.0
 ```
 
 See also the [CHANGELOG](CHANGELOG.md) for details about version upgrades.
