@@ -1,7 +1,7 @@
 <?php
 
-use React\Stream\ReadableStream;
 use Clue\React\Utf8\Sequencer;
+use React\Stream\ThroughStream;
 
 class SequencerTest extends TestCase
 {
@@ -10,7 +10,7 @@ class SequencerTest extends TestCase
 
     public function setUp()
     {
-        $this->input = new ReadableStream();
+        $this->input = new ThroughStream();
         $this->sequencer = new Sequencer($this->input);
     }
 
