@@ -1,4 +1,4 @@
-# clue/utf8-react [![Build Status](https://travis-ci.org/clue/php-utf8-react.svg?branch=master)](https://travis-ci.org/clue/php-utf8-react)
+# clue/reactphp-utf8 [![Build Status](https://travis-ci.org/clue/reactphp-utf8.svg?branch=master)](https://travis-ci.org/clue/reactphp-utf8)
 
 Streaming UTF-8 parser, built on top of [ReactPHP](https://reactphp.org/)
 
@@ -89,7 +89,7 @@ MIT
   the underlying [react/stream](https://github.com/reactphp/stream) component.
 
 * If you want to process ASCII control characters or ANSI / VT100 control byte sequences, you may
-  want to use [clue/term-react](https://github.com/clue/php-term-react) on the raw input
+  want to use [clue/reactphp-term](https://github.com/clue/reactphp-term) on the raw input
   stream before passing the resulting stream to the UTF-8 sequencer.
 
 * If you want to to display or inspect the byte sequences, you may
