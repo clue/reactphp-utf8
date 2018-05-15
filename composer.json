@@ -2,7 +2,7 @@
     "name": "clue/utf8-react",
     "description": "Streaming UTF-8 parser, built on top of ReactPHP",
     "keywords": ["UTF-8", "utf8", "unicode", "streaming", "ReactPHP"],
-    "homepage": "https://github.com/clue/php-utf8-react",
+    "homepage": "https://github.com/clue/reactphp-utf8",
     "license": "MIT",
     "authors": [
         {
