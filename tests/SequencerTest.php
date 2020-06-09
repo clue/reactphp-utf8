@@ -1,5 +1,7 @@
 <?php
 
+namespace Clue\Tests\React\Utf8;
+
 use Clue\React\Utf8\Sequencer;
 use React\Stream\ThroughStream;
 
@@ -8,7 +10,10 @@ class SequencerTest extends TestCase
     private $input;
     private $sequencer;
 
-    public function setUp()
+    /**
+     * @before
+     */
+    public function setUpSequencer()
     {
         $this->input = new ThroughStream();
         $this->sequencer = new Sequencer($this->input);
