@@ -1,5 +1,7 @@
 <?php
 
+namespace Clue\Tests\React\Utf8;
+
 use Clue\React\Utf8\Sequencer;
 use React\Stream\ThroughStream;
 
