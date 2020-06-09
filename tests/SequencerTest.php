@@ -8,7 +8,10 @@ class SequencerTest extends TestCase
     private $input;
     private $sequencer;
 
-    public function setUp()
+    /**
+     * @before
+     */
+    public function setUpSequencer()
     {
         $this->input = new ThroughStream();
         $this->sequencer = new Sequencer($this->input);
