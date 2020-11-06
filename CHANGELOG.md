@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0 (2020-11-06)
+
+*   Improve test suite and add `.gitattributes` to exclude dev files from export.
+    Prepare PHP 8 support, update to PHPUnit 9 and simplify test matrix.
+    (#15 by clue and #21 and #22 by @SimonFrings)
+
+*   Update project homepage.
+    (#14 by @clue)
+
 ## 1.1.0 (2017-07-06)
 
 *   Feature: Forward compatibility with Stream v1.0 and v0.7 (while keeping BC)
