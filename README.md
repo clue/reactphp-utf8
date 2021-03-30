@@ -1,4 +1,6 @@
-# clue/reactphp-utf8 [![Build Status](https://travis-ci.org/clue/reactphp-utf8.svg?branch=master)](https://travis-ci.org/clue/reactphp-utf8)
+# clue/reactphp-utf8
+
+[![CI status](https://github.com/clue/reactphp-utf8/workflows/CI/badge.svg)](https://github.com/clue/reactphp-utf8/actions)
 
 Streaming UTF-8 parser, built on top of [ReactPHP](https://reactphp.org/).
 
