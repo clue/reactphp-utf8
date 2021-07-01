@@ -1,6 +1,7 @@
 # clue/reactphp-utf8
 
 [![CI status](https://github.com/clue/reactphp-utf8/workflows/CI/badge.svg)](https://github.com/clue/reactphp-utf8/actions)
+[![installs on Packagist](https://img.shields.io/packagist/dt/clue/utf8-react?color=blue&label=installs%20on%20Packagist)](https://packagist.org/packages/clue/utf8-react)
 
 Streaming UTF-8 parser, built on top of [ReactPHP](https://reactphp.org/).
 
