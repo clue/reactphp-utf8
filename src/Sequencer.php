@@ -4,8 +4,8 @@ namespace Clue\React\Utf8;
 
 use Evenement\EventEmitter;
 use React\Stream\ReadableStreamInterface;
-use React\Stream\WritableStreamInterface;
 use React\Stream\Util;
+use React\Stream\WritableStreamInterface;
 
 /**
  * forwards only complete UTF-8 sequences
