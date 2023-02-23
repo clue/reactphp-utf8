@@ -1,6 +1,6 @@
 # clue/reactphp-utf8
 
-[![CI status](https://github.com/clue/reactphp-utf8/workflows/CI/badge.svg)](https://github.com/clue/reactphp-utf8/actions)
+[![CI status](https://github.com/clue/reactphp-utf8/actions/workflows/ci.yml/badge.svg)](https://github.com/clue/reactphp-utf8/actions)
 [![installs on Packagist](https://img.shields.io/packagist/dt/clue/utf8-react?color=blue&label=installs%20on%20Packagist)](https://packagist.org/packages/clue/utf8-react)
 
 Streaming UTF-8 parser, built on top of [ReactPHP](https://reactphp.org/).
@@ -78,7 +78,7 @@ This project follows [SemVer](https://semver.org/).
 This will install the latest supported version:
 
 ```bash
-$ composer require clue/utf8-react:^1.2
+composer require clue/utf8-react:^1.2
 ```
 
 See also the [CHANGELOG](CHANGELOG.md) for details about version upgrades.
@@ -94,13 +94,13 @@ To run the test suite, you first need to clone this repo and then install all
 dependencies [through Composer](https://getcomposer.org/):
 
 ```bash
-$ composer install
+composer install
 ```
 
 To run the test suite, go to the project root and run:
 
 ```bash
-$ vendor/bin/phpunit
+vendor/bin/phpunit
 ```
 
 ## License
