@@ -56,7 +56,7 @@ This class reassembles these sequences by buffering incomplete ones.
 Also, if you're merely consuming a stream and you're not in control of producing and
 ensuring valid UTF-8 data, it may as well include invalid UTF-8 byte sequences.
 This class replaces any invalid bytes in the sequence with a `?`.
-This replacement character can be given as a second paramter to the constructor:
+This replacement character can be given as a second parameter to the constructor:
 
 ```php
 $stream = new Sequencer($stdin, 'X');
