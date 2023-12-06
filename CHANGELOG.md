@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.3.0 (2023-12-06)
+
+*   Feature: Full PHP 8.3 compatibility.
+    (#29 by @yadaiio and #27 by @clue)
+
+*   Minor documentation improvements.
+    (#25 by @PaulRotmann, #26 by @SimonFrings and #28 by @yadaiio)
+
+*   Improve test suite, use GitHub actions for continuous integration (CI).
+    (#24 by @SimonFrings)
+
 ## 1.2.0 (2020-11-06)
 
 *   Improve test suite and add `.gitattributes` to exclude dev files from export.
